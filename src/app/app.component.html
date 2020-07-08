@@ -1,0 +1,13 @@
+<p>
+	Start editing to see some magic happen :)
+</p>
+
+<form [formGroup]="form">
+	<input  type="email"
+          name="Email"
+          [formControl]="form.controls['Email']"
+        />
+        <p *ngIf="form.controls['Email'].error"> Invalid</p>
+       
+ </form> 
+ {{getValue(form.get('Email')) | json}}
